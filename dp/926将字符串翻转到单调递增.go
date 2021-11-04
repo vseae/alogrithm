@@ -33,24 +33,27 @@ import "fmt"
 
 
 */
-func minFlipsMonoIncr(S string) int {
-	dp1 := make([]int, len(S)) // 当前变 0 维持的递增
-	dp2 := make([]int, len(S)) // 当前变 1 维持的递增
-	if S[0] == '1' {
-		dp1[0] = 1
-	} else {
-		dp2[0] = 1
+func minFlipsMonoIncr(s string) int {
+	dp := make([][]int, len(s))
+	for i := range dp {
+		dp[i] = make([]int, 2)
 	}
-	for i := 1; i < len(S); i++ {
-		if S[i] == '1' {
-			dp2[i] = min(dp2[i-1], dp1[i-1])
-			dp1[i] = dp1[i-1] + 1
-		} else { // '0'
-			dp1[i] = dp1[i-1]
-			dp2[i] = min(dp2[i-1], dp1[i-1]) + 1
+	n := len(s)
+	if s[0] == '1' {
+		dp[0][0] = 1
+	} else {
+		dp[0][1] = 1
+	}
+	for i := 1; i < n; i++ {
+		if s[i] == '1' {
+			dp[i][0] = dp[i-1][0] + 1
+			dp[i][1] = min(dp[i-1][0], dp[i-1][1])
+		} else {
+			dp[i][0] = dp[i-1][0]
+			dp[i][1] = min(dp[i-1][0]+1, dp[i-1][1]+1)
 		}
 	}
-	return min(dp1[len(S)-1], dp2[len(S)-1])
+	return min(dp[n-1][0], dp[n-1][1])
 }
 func min(i, j int) int {
 	if i < j {
@@ -60,4 +63,6 @@ func min(i, j int) int {
 }
 func main() {
 	fmt.Println(minFlipsMonoIncr("010110"))
+	fmt.Println(minFlipsMonoIncr("00110"))
+	fmt.Println(minFlipsMonoIncr("00011000"))
 }
