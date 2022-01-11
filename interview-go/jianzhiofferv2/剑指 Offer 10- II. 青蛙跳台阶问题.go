@@ -1,4 +1,4 @@
-package jianzhiofferv2
+package main
 
 func numWays(n int) int {
 	if n <= 1 {

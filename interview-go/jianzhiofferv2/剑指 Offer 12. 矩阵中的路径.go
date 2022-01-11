@@ -1,4 +1,4 @@
-package jianzhiofferv2
+package main
 
 func exist(board [][]byte, word string) bool {
 	n, m := len(board), len(board[0])

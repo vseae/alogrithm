@@ -1,4 +1,4 @@
-package jianzhiofferv2
+package main
 
 import "strings"
 

@@ -1,4 +1,4 @@
-package jianzhiofferv2
+package main
 
 func minArray(numbers []int) int {
 

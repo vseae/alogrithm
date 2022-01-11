@@ -1,4 +1,4 @@
-package jianzhiofferv2
+package main
 
 func fib(n int) int {
 	if n < 2 {
