@@ -1,4 +1,4 @@
-package greedy
+package main
 
 import (
 	"runtime/trace"
