@@ -16,7 +16,7 @@ func findTargetSumWays(nums []int, target int) int {
 	n := len(nums)
 	dp := make([]int, bagSize+1)
 	//2.确定递推公式
-	//dp[j]+=dp[j-num[i]]
+	//动态规划[j]+=动态规划[j-num[i]]
 	//3.确定dp边界
 	dp[0] = 1
 	//4.遍历

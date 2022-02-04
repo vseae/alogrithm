@@ -2,7 +2,7 @@ package main
 
 func rob(nums []int) int {
 
-	//递推公式 dp[i]=max(dp[i-2]+nums[i],dp[i-1])
+	//递推公式 动态规划[i]=max(动态规划[i-2]+nums[i],动态规划[i-1])
 	//base case
 	if len(nums) == 0 {
 		return 0

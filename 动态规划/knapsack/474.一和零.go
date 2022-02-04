@@ -5,7 +5,7 @@ import "strings"
 func findMaxForm(strs []string, m int, n int) int {
 	//1.确定dp数组的含义
 	//2.确定dp数组递推公式
-	//dp[i][j] = max(dp[i][j], dp[i - zeroNum][j - oneNum] + 1);
+	//动态规划[i][j] = max(动态规划[i][j], 动态规划[i - zeroNum][j - oneNum] + 1);
 	//3.确定边界
 	//4.遍历
 	dp := make([][]int, m+1)

@@ -7,7 +7,7 @@ func lastStoneWeightII(stones []int) int {
 	// 进一步转化：将一堆stone放进最大容量为sum/2的背包,求放进去的石头的最大重量MaxWeight,最终答案即为sum-2*MaxWeight;
 
 	//1.确定dp数组
-	//dp[j] = max(dp[j],dp[j-stones[j]]+stones[j])
+	//动态规划[j] = max(动态规划[j],动态规划[j-stones[j]]+stones[j])
 	dp := make([]int, 15001)
 	//2.确地dp边界
 	//全都为0

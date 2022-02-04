@@ -6,7 +6,7 @@ func uniquePaths(m int, n int) int {
 		dp[i] = make([]int, n)
 		dp[i][0] = 1
 	}
-	//dp[i][j]=dp[i-1][j]+dp[i][j-1]
+	//动态规划[i][j]=动态规划[i-1][j]+动态规划[i][j-1]
 	for j := 0; j < n; j++ {
 		dp[0][j] = 1
 	}

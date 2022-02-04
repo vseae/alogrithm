@@ -13,7 +13,7 @@ func cuttingRope(n int) int {
 		}
 	}
 	return dp[n]
-	//dp[j]
+	//动态规划[j]
 }
 
 func max(x, y int) int {

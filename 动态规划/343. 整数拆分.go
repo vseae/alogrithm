@@ -2,7 +2,7 @@ package main
 
 func integerBreak(n int) int {
 	dp := make([]int, n+1)
-	//dp[i] = max(dp[i],max(dp[i-1]*j,(i-j)*j)
+	//动态规划[i] = max(动态规划[i],max(动态规划[i-1]*j,(i-j)*j)
 	dp[1] = 1
 	dp[2] = 1
 	for i := 3; i < n+1; i++ {

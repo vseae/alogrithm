@@ -3,7 +3,7 @@ package main
 //完全背包解法
 func climbStairs(n int) int {
 	dp := make([]int, n+1)
-	//dp[j] +=dp[j-i]
+	//动态规划[j] +=动态规划[j-i]
 	dp[0] = 1
 	for j := 1; j < n; j++ {
 		for i := 1; i <= 2; i++ {

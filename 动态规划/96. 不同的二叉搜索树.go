@@ -2,7 +2,7 @@ package main
 
 func numTrees(n int) int {
 	dp := make([]int, n+3)
-	//dp[i] +=dp[j-1]*dp[i-j]
+	//动态规划[i] +=动态规划[j-1]*动态规划[i-j]
 
 	dp[0] = 1
 	dp[1] = 1

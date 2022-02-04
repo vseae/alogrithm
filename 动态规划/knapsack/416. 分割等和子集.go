@@ -9,7 +9,7 @@ func canPartition(nums []int) bool {
 		return false
 	}
 	//1.确定dp数组
-	//2.确定递推公式dp[i][j]=dp[i-1][j-nums[i-1]]||dp[i-1][j]   dp[i][j]=dp[i-1][j]
+	//2.确定递推公式dp[i][j]=动态规划[i-1][j-nums[i-1]]||动态规划[i-1][j]   动态规划[i][j]=动态规划[i-1][j]
 	dp := make([][]bool, len(nums)+1)
 	sum = sum / 2
 	for i, _ := range dp {

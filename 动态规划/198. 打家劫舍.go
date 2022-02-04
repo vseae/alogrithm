@@ -4,7 +4,7 @@ func rob(nums []int) int {
 	//确定dp意义
 	dp := make([]int, len(nums))
 	//确定递推公式
-	//dp[i]=max(dp[i-2]+nums[i],dp[i-1])
+	//动态规划[i]=max(动态规划[i-2]+nums[i],动态规划[i-1])
 	//初始化
 	if len(nums) == 0 {
 		return 0

@@ -4,13 +4,13 @@ import "fmt"
 
 func minPathSum(grid [][]int) int {
 	//1.确定dp数组的含义
-	//dp[m][n]
+	//动态规划[m][n]
 
 	//2.确定递推公式
-	//dp[i][j] = max(dp[i-1][j]+values[i][j],dp[i][j-1]+values[i][j])
+	//动态规划[i][j] = max(动态规划[i-1][j]+values[i][j],动态规划[i][j-1]+values[i][j])
 
 	//3.确定边界
-	//dp[1][1] = grid[0][0]
+	//动态规划[1][1] = grid[0][0]
 
 	//4.遍历
 	m := len(grid)

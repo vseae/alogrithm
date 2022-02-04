@@ -8,7 +8,7 @@ func numSquares(n int) int {
 	for j := 1; j <= n; j++ {
 		dp[j] = math.MaxInt32
 	}
-	//dp[j] += dp[j-i*i]
+	//动态规划[j] += 动态规划[j-i*i]
 	for i := 1; i <= n; i++ {
 		for j := i * i; j <= n; j++ {
 			dp[j] = min(dp[j], dp[j-i*i]+1)

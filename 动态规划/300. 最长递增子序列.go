@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func lengthOfLIS(nums []int) int {
-	//dp[i]：dp[i]表示i之前包括i的最长上升子序列的长度
-	//if nums[i]>nums[i-1] dp[i]=dp[i-1]+1
-	//if nums[i]<=nums[i-1] dp[i]=dp[i-1]
+	//动态规划[i]：动态规划[i]表示i之前包括i的最长上升子序列的长度
+	//if nums[i]>nums[i-1] 动态规划[i]=动态规划[i-1]+1
+	//if nums[i]<=nums[i-1] 动态规划[i]=动态规划[i-1]
 	n := len(nums)
 	dp := make([]int, n)
 	for i, _ := range nums {

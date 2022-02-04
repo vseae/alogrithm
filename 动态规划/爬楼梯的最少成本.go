@@ -14,8 +14,8 @@ import "fmt"
 //切入点：典型的动态规划问题
 //base case: 当前阶梯大于最大阶梯数
 //状态：体力花费
-//选择：初始阶梯(dp[0],dp[1])、爬的楼层
-//dp[i]：dp[i]=min(dp[i-1],dp[i-2])+cost[i] dp[0]=cost[0],dp[1]=cost[1]
+//选择：初始阶梯(动态规划[0],动态规划[1])、爬的楼层
+//动态规划[i]：动态规划[i]=min(动态规划[i-1],动态规划[i-2])+cost[i] 动态规划[0]=cost[0],动态规划[1]=cost[1]
 func minCostClimbingStairs(cost []int) int {
 	dp := make([]int, len(cost)+1)
 	dp[0] = cost[0]

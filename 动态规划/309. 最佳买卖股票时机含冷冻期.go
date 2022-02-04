@@ -1,9 +1,9 @@
 package main
 
 func maxProfit(prices []int) int {
-	//dp[i][0] dp[i][1]
-	//dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
-	//dp[i][1] = max(dp[i-1][1],dp[i-2][0]-price[i])
+	//动态规划[i][0] 动态规划[i][1]
+	//动态规划[i][0] = max(动态规划[i - 1][0], 动态规划[i - 1][1] + prices[i])
+	//动态规划[i][1] = max(动态规划[i-1][1],动态规划[i-2][0]-price[i])
 	n := len(prices)
 	if n < 2 {
 		return 0

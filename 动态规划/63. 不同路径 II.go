@@ -7,9 +7,9 @@ func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 	for i := 0; i < m; i++ {
 		dp[i] = make([]int, n)
 	}
-	//dp[i][j]=dp[i-1][j]+dp[i][j-1]
-	//dp[i][j]=dp[i-1][j]
-	//dp[i][j]=dp[i][j-1]
+	//动态规划[i][j]=动态规划[i-1][j]+动态规划[i][j-1]
+	//动态规划[i][j]=动态规划[i-1][j]
+	//动态规划[i][j]=动态规划[i][j-1]
 	for i := 0; i < m && obstacleGrid[i][0] == 0; i++ {
 		dp[i][0] = 1
 	}

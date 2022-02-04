@@ -1,8 +1,8 @@
 package main
 
 func maxProfit(prices []int) int {
-	//dp[i][0] 第i天持有时利润
-	//dp[i][1] 第i天不持有时利润
+	//动态规划[i][0] 第i天持有时利润
+	//动态规划[i][1] 第i天不持有时利润
 	n := len(prices)
 	dp := make([][]int, n)
 	for i := 0; i < n; i++ {
