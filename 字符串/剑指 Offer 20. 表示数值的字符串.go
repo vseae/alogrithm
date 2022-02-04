@@ -1,4 +1,4 @@
-package 字符串
+package main
 
 import "regexp"
 
