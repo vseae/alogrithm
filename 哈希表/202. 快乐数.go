@@ -7,13 +7,14 @@ func isHappy(n int) bool {
 	for n != 1 && !m[n] {
 		n, m[n] = getSum(n), true
 	}
+	return n == 1
 }
 
 func getSum(n int) int {
 	nStr := strconv.Itoa(n)
 	var sum int
 	for i := 0; i < len(nStr); i++ {
-		sum += (i - '0') * (i - '0')
+		sum += int((nStr[i] - '0') * (nStr[i] - '0'))
 	}
 	return sum
 }
