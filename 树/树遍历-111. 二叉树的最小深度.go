@@ -5,7 +5,7 @@ import (
 )
 
 /**
- * Definition for a binary tree node.
+ * Definition for a binary 树 node.
  * type TreeNode struct {
  *     Val int
  *     Left *TreeNode
