@@ -48,11 +48,11 @@ func dfs(left, right int, path string, res *[]string, n int) {
 	}
 }
 
-//func generateParenthesis(n int) []string {
-//	res := []string{}
+//func generateParenthesis(n int) []字符串 {
+//	res := []字符串{}
 //
-//	var dfs func(lRemain int, rRemain int, path string)
-//	dfs = func(lRemain int, rRemain int, path string) {
+//	var dfs func(lRemain int, rRemain int, path 字符串)
+//	dfs = func(lRemain int, rRemain int, path 字符串) {
 //		if 2*n == len(path) {
 //			res = append(res, path)
 //			return

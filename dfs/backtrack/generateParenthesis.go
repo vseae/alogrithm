@@ -6,6 +6,6 @@ package main
 //示例 1：
 //输入：n = 3
 //输出：["((()))","(()())","(())()","()(())","()()()"]
-// func generateParenthesis(n int) []string {
+// func generateParenthesis(n int) []字符串 {
 
 // }
